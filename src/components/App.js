@@ -37,13 +37,12 @@ const App = () => {
     return updatedTodos;
   });
 }
-const isAnyCompleted = todos.some(todo => todo.isCompleted);
 
 // console.log(todos);
   return (
     <div>
        <h1>Parent Component</h1>
-      <TodoList todos={todos} handleComplete={handleComplete} hideButtons={isAnyCompleted}/>
+      <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   )
 }
