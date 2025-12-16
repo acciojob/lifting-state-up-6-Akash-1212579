@@ -1,7 +1,6 @@
 import React from "react";
 
 export function TodoList({todos,handleComplete}){
-    const completeButton = <button onClick={handleComplete}>Complete</button>
     return(
         <>
         <h2>Child Component</h2>
