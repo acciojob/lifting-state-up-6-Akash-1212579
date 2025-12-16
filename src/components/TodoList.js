@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TodoList({todos,handleComplete}){
+export function TodoList({todos,handleComplete,hideButtons}){
     return(
         <>
         <h2>Child Component</h2>
@@ -8,7 +8,7 @@ export function TodoList({todos,handleComplete}){
   {todos.map((ele) => (
     <li key={ele.id}>
       {ele.text}
-      {!ele.isCompleted && (
+      {!ele.isCompleted && !hideButtons && (
         <button onClick={() => handleComplete(ele.id)}>
           Complete
         </button>
